@@ -12,14 +12,17 @@ function Home() {
     return (
         <>
 
+            <Navbar />
         
       <div className="Home">
-            <Navbar />
 
 
         <div className="Body">
+            
+            <img src={logo} alt='Logo' id='logo'/> 
+
             <div className='title'>
-                <h1>Bienvenue dans votre app ! <img src={logo} alt='Logo' id='logo'/> </h1>
+                <h1>Bienvenue dans votre app ! </h1>
             </div>
 
             <div className='center'>
