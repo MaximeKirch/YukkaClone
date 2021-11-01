@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -56,6 +55,14 @@ function Product(props) {
                     <button style={ingredient === 'C' ? {background:'var(--yellow)', color:'var(--black)'} : {color:'var(--white)'}} onClick={() => setIngredient('C')}> Informations </button>
                 </div>
 
+                <div className="productList">
+                    <select>
+                        <option style={ingredient === 'A' ? {background:'var(--yellow)', color:'var(--black)'} : {color:'var(--white)'}} onSelect={() => setIngredient('A')}> Nutriments </option>
+                        <option style={ingredient === 'B' ? {background:'var(--yellow)', color:'var(--black)'} : {color:'var(--white)'}} onSelect={() => setIngredient('B')}> Ingrédients </option>
+                        <option style={ingredient === 'C' ? {background:'var(--yellow)', color:'var(--black)'} : {color:'var(--white)'}} onSelect={() => setIngredient('C')}> Informations </option>
+                    </select>
+                </div>
+
 
             {
 
@@ -105,9 +112,10 @@ function Product(props) {
                <div className='productInformations'>
 
                     <p>Quantité : {dataProduct.quantity}</p>
+                    <p>Allergènes : {dataProduct.allergens_imported}</p>
                     <p>Conditionnement : {dataProduct.packaging}</p>
                     <p>Conservation : {dataProduct.conservation_conditions}</p>
-                    <p>Allergènes : {dataProduct.allergens}</p>
+                    <p>Expire le : {dataProduct.expiration_date}</p>
 
                </div>
            }

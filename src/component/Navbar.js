@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import {Link, useHistory} from 'react-router-dom'
 import '../App.css'
-import Home from './Home';
 import {AiOutlineHome} from "react-icons/ai";
 import { IconContext } from 'react-icons/lib';
+import {AiOutlineSearch} from 'react-icons/ai'
 
 export default function Navbar() {
 
@@ -28,6 +28,7 @@ export default function Navbar() {
                     placeholder='Votre code barre'
                     onChange={onChangeHandler}/>
                     <button id='searchBtn' onClick={() => history.push('/Product/'+textSearch)}>Rechercher</button>
+                    <button id='searchBtnResp' onClick={() => history.push('/Product/'+textSearch)}><AiOutlineSearch /></button>
                 </div>
 
             </div>

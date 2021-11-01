@@ -1,7 +1,6 @@
 import React from "react";
 import '../App.css'
 import Navbar from '../component/Navbar'
-import {DiJsBadge} from 'react-icons/di'
 import logo from '../assets/logo.png'
 import Footer from "./Footer";
 
